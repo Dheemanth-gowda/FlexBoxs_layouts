@@ -1,0 +1,29 @@
+@mixin fixed-bg($source, $postion) {
+    background-image: url($source);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: $postion;
+    background-attachment: fixed;
+}
+
+@mixin font($size) {
+    font-size: $size;
+}
+
+@mixin auto-center($valueC) {
+    width: $valueC;
+    margin: 0 auto;
+}
+
+body {
+    @include fixed-bg("bg.jpg", left top);
+    font-family: 'Stalemate', cursive;
+}
+
+p {
+    @include font(58px);
+    @include auto-center(74%);
+    margin-top: 214px;
+    text-align: center;
+    color: white;
+}
